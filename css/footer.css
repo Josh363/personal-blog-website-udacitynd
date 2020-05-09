@@ -1,0 +1,10 @@
+footer {
+    grid-area: ft;
+    background-color: #200931;
+    color: #FDEA1C;
+    text-align: center;
+}
+
+.fab {
+    color: #F4F0C0;
+}

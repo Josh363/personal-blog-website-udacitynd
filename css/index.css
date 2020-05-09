@@ -1,0 +1,85 @@
+@import "card.css";
+@import "nav.css";
+@import "footer.css";
+
+/* main content layout */
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px;
+    grid-template-areas: 
+    "hd hd"
+    "nav nav"
+    "feat-post feat-post"
+    "subscribe subscribe"
+    "card1 card3"
+    "card2 card3"
+    "ft ft";
+}
+
+header {
+    grid-area: hd;
+    color: #FDEA1C;
+    background-color: #6A0BB2;
+    text-align: center;
+}
+
+.feat-post {
+    grid-area: feat-post;
+    background-image: url('../img/egyptian-statue.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.blog1 {
+    grid-area: card1;
+    background-image: url('../img/egypt-5.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.blog2 {
+    grid-area: card2;
+    background-image: url('../img/egypt-photo-3.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.blog3 {
+    grid-area: card3;
+    background-image: url('../img/egypt-photo2.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* subscribe form */
+
+.subscribe {
+    grid-area: subscribe;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #6A0BB2;
+}
+    
+.form-container {
+    display: flex;
+}
+
+.sub-title {
+    text-align: center;
+    color: #F4F0C0;
+}
+
+input {
+    margin: 5px;
+}
+
+

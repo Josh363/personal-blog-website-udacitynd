@@ -1,0 +1,22 @@
+nav {
+    grid-area: nav;
+    background-color: #FDEA1C;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.nav-menu {
+    display:flex;
+    list-style-type: none;
+}
+
+.nav-item {
+    margin: 5px;
+    padding: 0;
+}
+
+.nav-item > a {
+    color: #6A0BB2;
+    font-size: 20px;
+}
