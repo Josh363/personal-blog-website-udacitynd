@@ -1,6 +1,7 @@
 @import "card.css";
 @import "nav.css";
 @import "footer.css";
+@import "layout.css";
 
 /* main content layout */
 .grid {
@@ -22,6 +23,9 @@ header {
     color: #FDEA1C;
     background-color: #6A0BB2;
     text-align: center;
+    display: flex;
+    justify-content: center;
+    align-content: center;
 }
 
 .feat-post {
@@ -54,6 +58,11 @@ header {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+/* post-container layout...feat post, blog1,blog2,blog3 */
+
+#post {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -71,15 +80,26 @@ header {
     
 .form-container {
     display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+.form-control {
+    display: flex;
+    text-align: center;
+}
+
+input[type=text], input[type=submit] {
+    text-align: center;
+    width: 100%;
+    padding: 10px;
+    margin: 5px;
+  }
 
 .sub-title {
     text-align: center;
     color: #F4F0C0;
 }
 
-input {
-    margin: 5px;
-}
 
 

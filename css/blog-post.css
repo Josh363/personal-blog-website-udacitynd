@@ -1,0 +1,82 @@
+@import "card.css";
+@import "nav.css";
+@import "footer.css";
+@import "layout.css";
+
+/* main content layout */
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 5px;
+    grid-template-areas:
+    "hd"
+    "nav"
+    "post"
+    "archive"
+    "ft";
+}
+
+/* header */
+header {
+    grid-area: hd;
+    color: #FDEA1C;
+    background-color: #6A0BB2;
+    text-align: center;
+}
+
+/* author box */
+.author-info {
+    background-color: #200931;
+    text-align: center;
+    color: #F4F0C0
+}
+
+.author-img {
+    border-radius: 60%;
+    width: 40%;
+    object-fit: cover;
+    padding: 5px;
+}
+
+/* blog post */
+.post {
+    grid-area: post;
+}
+
+.post-info {
+    background-color: #F4F0C0;
+    text-align: center;
+    color: #200931;
+}
+
+.blog-post {
+    background-color: #FDEA1C;
+    color: #200931;
+    padding: 10px;
+}
+
+.blog-pic-container {
+    text-align: center;
+    margin: 5px;
+}
+
+.blog-quote {
+    text-align: center;
+    padding: 20px;
+    margin: 10px;
+    border: double rgb(106, 11, 178)
+}
+
+/*archives */
+.archive-container {
+    grid-area: archive;
+    background-color:#6A0BB2;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.archive-container > a {
+    color: #FDEA1C;
+    margin: 5px;
+}
