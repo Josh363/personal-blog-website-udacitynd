@@ -1,12 +1,13 @@
-@import "card.css";
 @import "nav.css";
 @import "footer.css";
 @import "layout.css";
 
-/* main content layout */
+/* mobile content layout */
 .grid {
     display: grid;
+    height: 100vh;
     grid-template-columns: 1fr 1fr;
+    grid-template-rows: 50px 50px 1fr 1fr 1fr 1fr 30px;
     gap: 5px;
     grid-template-areas: 
     "hd hd"
@@ -18,6 +19,45 @@
     "ft ft";
 }
 
+/* content layout for 640px width and above */
+@media (min-width: 640px) and (max-width: 1000px) {
+    .grid {
+        display: grid;
+        height: 100vh;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 50px 50px 1fr 1fr 30px;
+        gap: 5px;
+        grid-template-areas:
+        "hd hd hd hd"
+        "nav nav nav nav"
+        "feat-post feat-post card1 card1"
+        "card2 card2 subscribe subscribe"
+        "ft ft ft ft";
+    }
+
+    #blog3 {
+        display: none;
+    }
+}
+
+/* content layout for 1001 px and above */
+@media (min-width: 1001px) {
+    .grid {
+        display: grid;
+        height: 100vh;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 50px 50px 1fr 1fr 30px;
+        gap: 5px;
+        grid-template-areas:
+        "hd hd hd hd hd hd"
+        "nav nav nav nav nav nav"
+        "feat-post feat-post feat-post card3 card3 card3"
+        "card1 card1 subscribe subscribe card2 card2"
+        "ft ft ft ft ft ft"
+    }
+}
+
+/* header */
 header {
     grid-area: hd;
     color: #FDEA1C;
@@ -28,7 +68,17 @@ header {
     align-content: center;
 }
 
-.feat-post {
+/* layout for blog post cards */
+.card {
+    background-color: rgba(244, 240, 192, .5);
+    padding: 10px;
+    margin: 20px;
+    text-align: center;
+    border-radius: 8px;
+    color: #200931;
+}
+
+#feat-post {
     grid-area: feat-post;
     background-image: url('../img/egyptian-statue.jpg');
     background-position: center;
@@ -36,7 +86,7 @@ header {
     background-size: cover;
 }
 
-.blog1 {
+#blog1 {
     grid-area: card1;
     background-image: url('../img/egypt-5.jpg');
     background-position: center;
@@ -44,15 +94,16 @@ header {
     background-size: cover;
 }
 
-.blog2 {
+#blog2 {
     grid-area: card2;
     background-image: url('../img/egypt-photo-3.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    
 }
 
-.blog3 {
+#blog3 {
     grid-area: card3;
     background-image: url('../img/egypt-photo2.jpg');
     background-position: center;
@@ -60,9 +111,7 @@ header {
     background-size: cover;
 }
 
-/* post-container layout...feat post, blog1,blog2,blog3 */
-
-#post {
+.post {
     display: flex;
     justify-content: center;
     align-items: center;

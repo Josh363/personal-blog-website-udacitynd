@@ -1,19 +1,39 @@
-@import "card.css";
+
 @import "nav.css";
 @import "footer.css";
 @import "layout.css";
 
-/* main content layout */
+/* mobile content layout */
 .grid {
     display: grid;
+    height: 100vh;
     grid-template-columns: 1fr;
+    grid-template-rows: 50px 50px 30vh auto auto 30px;
     gap: 5px;
     grid-template-areas:
     "hd"
     "nav"
+    "img"
     "post"
     "archive"
     "ft";
+}
+
+/* content layout for 640px width and above */
+@media (min-width: 640px) {
+    .grid{
+        display: grid;
+        height: 100vh;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 50px 50px auto auto 30px;
+        gap: 5px;
+        grid-template-areas:
+        "hd hd"
+        "nav nav"
+        "img post"
+        "archive archive"
+        "ft ft";
+    }
 }
 
 /* header */
@@ -22,6 +42,15 @@ header {
     color: #FDEA1C;
     background-color: #6A0BB2;
     text-align: center;
+}
+
+/* egypt image */
+.egypt-image {
+    grid-area: img;
+    background-image: url('../img/egypt-5.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 /* author box */
